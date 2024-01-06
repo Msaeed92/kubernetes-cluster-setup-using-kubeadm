@@ -70,9 +70,15 @@ systemctl enable kubelet --now <br />
 --------------------------------------------------------
 
 **Step 8- Installing Docker, Enable and start the services**
+Setup Docker Repo
+
 dnf config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo <br /> 
+
+Installing
+
 yum install docker-ce docker-ce-cli containerd.io -y <br />
 systemctl enable docker --now <br />
+
 -----------------------------------------------------
 
 **Step9 - Disable Swap**
