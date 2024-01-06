@@ -1,8 +1,11 @@
 Follow the below steps for creating Kubernetes Cluster on Rocky Os.
 
 **Create 3 Virtual machine ( Rocky OS server mode) with the below resources**
+HDD : 30 GB
+Memory : 3 GB
+CPU : 1 cpu for worker nodes --- 2 cpu for master node (control-plane).
 
-Steps 1 tp 8 is done on Both Master and worker nodes, Steps 9 & 10 is to be done only on master node, step 11 is done only on worker nodes.
+Steps 1 to 9 is done on all nodes. Steps 10 and 11 only on Master . Step 12 only on Node1 & Node2
 
 -------------------------------------------------------
 
