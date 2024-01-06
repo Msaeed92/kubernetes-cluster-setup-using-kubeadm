@@ -99,7 +99,7 @@ vi /etc/fstab and Comment the line with Swap Keyword<br />
 kubeadm init<br />
 mkdir -p $HOME/.kube<br />
 cp -i /etc/kubernetes/admin.conf $HOME/.kube/config<br />
-chown $(id -u):$(id -g) $HOME/.kube/config
+chown $ (id -u): $ (id -g) $HOME/.kube/config
   
 ------------------------------------------------------
   
