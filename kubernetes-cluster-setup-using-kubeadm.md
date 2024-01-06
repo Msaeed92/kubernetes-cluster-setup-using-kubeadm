@@ -1,33 +1,15 @@
-# kubernetes-cluster-setup-using-kubeadm
-How to create kubernetes cluster using kubeadm
+Follow the below steps for creating Kubernetes Cluster on Rocky Os.
 
-Watch the video :https://youtu.be/cAZ5nkLfL6M
-
-Follow the below steps for creating Kubernetes Cluster on CentOs.
-
-Steps Involved:
-
-1. Set Hostnames
-2. Assign Static IP
-3. Edit /etc/hosts file
-4. Disable SELinux
-5. Disable firewall and edit Iptables settings
-6. Setup Kubernetes Repo
-7. Installing Kubeadm and Docker, Enable and start the services
-8. Disable Swap
-9. Initialize Kubernetes Cluster
-10. Installing Pod Network using Calico network
-11. Join Worker Nodes
-
+**Create 3 Virtual machine ( Rocky OS server mode) with the below resources**
 Steps 1 tp 8 is done on Both Master and worker nodes, Steps 9 & 10 is to be done only on master node, step 11 is done only on worker nodes.
 
 -------------------------------------------------------
 
-**Set Hostnames**
+Step2- Set Hostnames
 
-hostnamectl set-hostname k8smaster (On Master)<br />
-hostnamectl set-hostname k8sworker1(On Node1)<br />
-hostnamectl set-hostname k8sworker2 (On Node2)<br />
+hostnamectl set-hostname Master (On Master)<br />
+hostnamectl set-hostname Node1(On Node1)<br />
+hostnamectl set-hostname Node2 (On Node2)<br />
 
 ------------------------------------------------------
 
