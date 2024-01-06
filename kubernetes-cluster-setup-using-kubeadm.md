@@ -113,6 +113,7 @@ kubectl get pods -n kube-system<br />
   run the output on Node1 and Node2<br />
   
   output should be as the below :
+  
   kubeadm join 192.168.0.xxx:6443 --token XXX\--discovery-token-ca-cert-hash sha256:XX<br />
 
   ---------------------------------------------------
