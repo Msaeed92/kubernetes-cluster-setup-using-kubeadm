@@ -127,7 +127,10 @@ kubectl get pods -n kube-system<br />
 
   ---------------------------------------------------
   Troubleshooting - if you faced error ( --ignore-preflight-errors) while kubeadmin init
+  
   1- rm -f /etc/containerd/config.toml
+  
   2- systemctl restart containerd
+  
   3- kubeadm init
   
