@@ -56,14 +56,13 @@ echo '1' > /proc/sys/net/bridge/bridge-nf-call-iptables<br />
   
 **Step6 - Setup Kubernetes Repo**
 
-cat << EOF > /etc/yum.repos.d/kubernetes.repo<br />
-[kubernetes]<br />
-name=Kubernetes<br />
-baseurl=https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64<br />
-enabled=1<br />
-gpgcheck=1<br />
-repo_gpgcheck=1<br />
-gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg<br />
+cat << EOF > //etc/yum.repos.d/kubernetes.repo
+[kubernetes]
+name=Kubernetes
+baseurl=https://pkgs.k8s.io/core:/stable:/v1.29/rpm/
+enabled=1
+gpgcheck=1
+gpgkey=https://pkgs.k8s.io/core:/stable:/v1.29/rpm/repodata/repomd.xml.key
 EOF<br />
 
 ---------------------------------------------------------
@@ -120,3 +119,8 @@ kubectl get pods -n kube-system<br />
   kubeadm join 192.168.0.xxx:6443 --token XXX\--discovery-token-ca-cert-hash sha256:XX<br />
 
   ---------------------------------------------------
+  Troubleshooting - if you faced error ( --ignore-preflight-errors) while kubeadmin init
+  1- rm -f /etc/containerd/config.toml
+  2- systemctl restart containerd
+  3- kubeadm init
+  
