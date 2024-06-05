@@ -59,11 +59,17 @@ echo '1' > /proc/sys/net/bridge/bridge-nf-call-iptables<br />
 cat << EOF > //etc/yum.repos.d/kubernetes.repo
 
 [kubernetes]
+
 name=Kubernetes
+
 baseurl=https://pkgs.k8s.io/core:/stable:/v1.29/rpm/
+
 enabled=1
+
 gpgcheck=1
+
 gpgkey=https://pkgs.k8s.io/core:/stable:/v1.29/rpm/repodata/repomd.xml.key
+
 EOF<br />
 
 ---------------------------------------------------------
