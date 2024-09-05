@@ -62,13 +62,13 @@ cat << EOF > //etc/yum.repos.d/kubernetes.repo
 
 name=Kubernetes
 
-baseurl=https://pkgs.k8s.io/core:/stable:/v1.29/rpm/
+baseurl=https://pkgs.k8s.io/core:/stable:/v1.31/rpm/
 
 enabled=1
 
 gpgcheck=1
 
-gpgkey=https://pkgs.k8s.io/core:/stable:/v1.29/rpm/repodata/repomd.xml.key
+gpgkey=https://pkgs.k8s.io/core:/stable:/v1.31/rpm/repodata/repomd.xml.key
 
 EOF<br />
 
@@ -76,7 +76,7 @@ EOF<br />
   
 **Step7 - Installing Kubeadm, Enable and start the services**
   
-yum install kubeadm -y<br />
+yum install -y kubelet kubeadm kubectl --disableexcludes=kubernetes -y<br />
 systemctl enable kubelet --now <br />
   
 --------------------------------------------------------
